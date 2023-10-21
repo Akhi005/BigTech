@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import Theme from "./Theme";
+
 const Navbar = () => {
     const {user,logOut}=useContext(AuthContext);
     const handleSignout=()=>{
@@ -19,7 +19,7 @@ const Navbar = () => {
            <div className="mt-4"> <NavLink to='/'> Home</NavLink></div>
            <div className="mt-4"> <NavLink to='/addtechnology'> Add Product</NavLink></div>
            <div className="mt-4"> <NavLink to='/mycart'> My Cart</NavLink></div>
-           <div className="mt-4"> <NavLink to='/'> theme</NavLink></div>
+         
            
         </div>
        {

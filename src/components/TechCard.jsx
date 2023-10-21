@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 const TechCard = ({ tech, technologies, setTechnologies }) => {
-  const { _id,name,brand,type,product_pic,price,details} = tech;
+  const { _id,name,brand,type,product_pic,Price,Details} = tech;
+  // console.log(tech);
   const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({
@@ -35,9 +36,7 @@ const TechCard = ({ tech, technologies, setTechnologies }) => {
       }
     })
   }
-  
   return (
-    
     <div className="card w-96 bg-base-100 shadow-xl rounded">
       <figure><img src={product_pic} className="h-[200px] p-10 absolute" />
         <div className="btn-group btn-group-horizontal relative mt-52 gap-5 p-5">
@@ -52,8 +51,8 @@ const TechCard = ({ tech, technologies, setTechnologies }) => {
         <div className="badge badge-error text-white">{name}</div>
         <p>{brand}</p>
         <p>{type}</p>
-        <p>{price}</p>
-        <p>{details}</p>
+        <p>{Price}</p>
+        <p>{Details}</p>
         <div className="card-actions justify-center text-white">
           <Link to={`/DetailsCard/${_id}`}><button className="border-3 px-4 py-2 bg-red-400">Details</button></Link>
         </div>

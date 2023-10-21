@@ -1,25 +1,37 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-
+import { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import TechCard from "./TechCard"
 const MyCart = () => {
-  const { brandName } = useParams();
-  const [laptops, setLaptops] = useState(brandName);
-
-  useEffect(() => {
-    // Fetch laptops of the selected brand from the backend
-    fetch(`http://localhost:5000/mycart`)
-      .then(response => response.json())
-      .then(data => setLaptops(data))
-      .catch(error => console.error(error));
-  }, []);
+  const loadedtechnology = useLoaderData();
+  const [technologies,setTechnologies] =useState(loadedtechnology);
+   const [cart,setCart]=useState([]);
+  const handleAddToCart=tech=>{
+    const newcart=[...cart,tech];
+    console.log(newcart);
+    setCart(newcart);
+    fetch(`http://localhost:5000/mycart/${newcart}`,{
+        method:'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(newcart)
+    })
+    .then(res=>res.json())
+    .then(data=>{console.log(data) })
+  }
   return (
     <div>
-      <h1>MyCart</h1>
-      <ul>
-        {laptops.map(laptop => (
-          <li key={laptop.id}>{laptop.name}</li>
-        ))}
-      </ul>
+      <h1 className='text-4xl text-center mt-10'>Technology : {technologies.length}</h1>
+      {
+        <div className='grid md:grid-cols-3 mt-5 mb-10'>  {
+          technologies.map(tech => <TechCard key={tech._id}
+            tech={tech} technologies={technologies} 
+            setTechnologies={setTechnologies} 
+            handleAddToCart={handleAddToCart}
+            ></TechCard>) 
+        }
+        </div>
+      }
     </div>
   );
 };

@@ -3,8 +3,8 @@ import Swal from "sweetalert2";
 const UpdateTechnology = () => {
     const tech=useLoaderData();
     const Navigate=useNavigate();
-    const {_id,name,category,details,picture} = tech;
-    // console.log(_id,name);
+    const {_id,Name,Brand,Brand_Image,Product_Image,Details} = tech;
+    console.log(_id,Name);
     const handleUpdate=event=>{
         event.preventDefault();
         const form=event.target;
@@ -17,7 +17,7 @@ const UpdateTechnology = () => {
         const brand_pic=form.brand_pic.value;
         const rating=form.rating.value;
         const updated={name,brand,type,product_pic,price,brand_pic,rating,details};
-        console.log(updated);
+        // console.log(updated);
         fetch(`http://localhost:5000/tech/${_id}`,{
             method:'PUT',
             headers:{
@@ -40,7 +40,7 @@ const UpdateTechnology = () => {
     }
     return (
         <div>
-            <h2 className="text-2xl text-center mt-5">Update Technology : {name}</h2>
+            <h2 className="text-2xl text-center mt-5">Update Technology : {Name}</h2>
             <form onSubmit={handleUpdate}>
             <div className="flex text-center items-center justify-center  mt-14 bg-[#F4F3F0] p-14 gap-10">
               <div className="md:w-1/2">
@@ -74,7 +74,6 @@ const UpdateTechnology = () => {
                         <span className="label-text">Product Image</span>
                     </label>
                     <label className="input-group">
-                       
                         <input type="text" name="product_pic" placeholder="Picture" className="input input-bordered w-full" />
                     </label>
                 </div>
@@ -113,7 +112,7 @@ const UpdateTechnology = () => {
                     </label>
                     <label className="input-group">
                        
-                        <input type="text" name="rating" placeholder="Brand image" className="input input-bordered w-full" />
+                        <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-full" />
                     </label>
                 </div>
             

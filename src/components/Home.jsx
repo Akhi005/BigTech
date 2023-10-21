@@ -3,11 +3,26 @@ import Navbar from "./Navbar";
 import TechHome from "./TechHome";
 import MeetTeam from "./MeetTeam";
 import About from "./About";
-
+import { useEffect, useState } from "react";
+import '../App.css'
 const Home = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  }, [isDarkMode]);
     const loadedtechnology=useLoaderData();
     return (
        <div>
+         <button onClick={toggleDarkMode}>
+       {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
             <Navbar></Navbar>
             <div className="flex justify-center items-center gap-10 p-10">
                 <div> <img src="https://i.ibb.co/5cnWx46/banner.png" className="h-[420px]" /></div>
@@ -22,9 +37,7 @@ const Home = () => {
             </div>
             <About></About>
             <TechHome key={loadedtechnology._id} loadedtechnology={loadedtechnology} ></TechHome>
-          
             <MeetTeam></MeetTeam>
-
             <footer className="footer p-10 bg-neutral text-neutral-content mt-5">
                 <nav>
                     <header className="footer-title">Services</header>
@@ -47,9 +60,7 @@ const Home = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
             </footer>
-          
        </div>
-       
     );
 };
 

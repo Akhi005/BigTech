@@ -14,7 +14,6 @@ const SignIn = () => {
     const Navigate=useNavigate();
     const auth = getAuth(app);
     const GoogleSignIn=()=>{
-    
         signInWithPopup(auth,Provider)
         .then(res=>{
             setsuccess(res.user);

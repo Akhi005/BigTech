@@ -1,0 +1,68 @@
+[
+    {
+        "_id":1,
+        "Name": "TechMaster X7",
+        "Brand": "Intel",
+        "Type": "Phone",
+        "Price": 699.99,
+        "Description": "The TechMaster X7 is a cutting-edge smartphone with a sleek design and powerful features.",
+        "Rating": 4.8,
+        "Brand_Image": "https://i.ibb.co/JpkwWxL/intel.png",
+        "Product_Image": "https://i.ibb.co/Y0zQWWS/laptop-1.jpg"
+    },
+    {
+        "_id":2,
+        "Name": "EliteBook Pro 15",
+        "Brand": "Apple",
+        "Type": "Computer",
+        "Price": 1299.99,
+        "Description": "The EliteBook Pro 15 is a high-performance laptop for professionals who demand the best.",
+        "Rating": 4.9,
+        "Brand_Image": "https://i.ibb.co/vD937PM/Apple-logo.png",
+        "Product_Image": "https://i.ibb.co/HrMjx9h/laptop-2.jpg"
+    },
+    {
+        "_id":3,
+        "Name": "SoundWave 900",
+        "Brand": "Samsung",
+        "Type": "Headphones",
+        "Price": 149.99,
+        "Description": "Immerse yourself in crystal-clear audio with the SoundWave 900 headphones.",
+        "Rating": 4.7,
+        "Brand_Image": "https://i.ibb.co/VB9jkMR/samsung-logo.png",
+        "Product_Image": "https://i.ibb.co/hfnL6RS/laptop-3.jpg"
+    },
+    {
+        "_id":4,
+        "Name": "SmartPad 10",
+        "Brand": "Toshiba",
+        "Type": "Tablet",
+        "Price": 349.99,
+        "Description": "The SmartPad 10 is a feature-packed tablet that's perfect for work and play.",
+        "Rating": 4.6,
+        "Brand_Image": "https://i.ibb.co/SyXBBhR/toshiba.png",
+        "Product_Image": "https://i.ibb.co/nbFJ1jg/laptop-4.jpg"
+    },
+    {
+        "_id":5,
+        "Brand": "Sony",
+        "Type": "Speaker",
+        "Name": "UltraSound Speaker",
+        "Price": 89.99,
+        "Description": "Enjoy exceptional sound quality with the portable UltraSound Speaker.",
+        "Rating": 4.5,
+        "Brand_Image": "https://i.ibb.co/nCvHyDd/sony-logo.png",
+        "Product_Image": "https://i.ibb.co/4WW8Tqp/laptop-5.jpg"
+    },
+    {
+        "_id":6,
+        "Name": "PixelBuds Pro",
+        "Brand": "Google",
+        "Type": "Earbuds",
+        "Price": 199.99,
+        "Description": "PixelBuds Pro offer noise-cancelling technology and premium sound in a compact design.",
+        "Rating": 4.8,
+        "Brand_Image": "https://i.ibb.co/7JGz4vB/Google.png",
+        "Product_Image": "https://i.ibb.co/kgtZcTN/laptop-6.jpg"
+    }
+]
