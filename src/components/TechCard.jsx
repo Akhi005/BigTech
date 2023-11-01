@@ -16,7 +16,7 @@ const TechCard = ({ tech, technologies, setTechnologies }) => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        fetch(`http://localhost:5000/tech/${_id}`, {
+        fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/${_id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())

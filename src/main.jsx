@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   },{
     path: "/app",
     element: <App></App>,
-    loader:()=>fetch('http://localhost:5000/tech')
+    loader:()=>fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech')
   },{
     path: "/addtechnology",
     element: <PrivateRoute><AddTechnology></AddTechnology></PrivateRoute>,
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
   },{
     path: "/updatetechnology/:id",
     element: <UpdateTechnology></UpdateTechnology>,
-    loader:({params})=>fetch(`http://localhost:5000/tech/${params.id}`)
+    loader:({params})=>fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/${params.id}`)
   },{
     path:"/signin",
     element:<SignIn></SignIn>
@@ -43,20 +43,20 @@ const router = createBrowserRouter([
   },{
     path:"/users",
     element:<Users></Users>,
-    loader:() => fetch('http://localhost:5000/user') 
+    loader:() => fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/user') 
   },{
     path:"/mycart",
     element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-    loader:()=>fetch(`http://localhost:5000/tech`)
+    loader:()=>fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/mycart')
   },
   {
     path:"/DetailsCard/:id",
     element:<PrivateRoute><DetailsCard></DetailsCard></PrivateRoute>,
-    loader:({params})=>fetch(`http://localhost:5000/tech/${params.id}`)
+    loader:({params})=>fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/${params.id}`)
   },{
     path:"/product/:brand",
     element:<Product></Product>,
-    loader:({params})=>fetch(`http://localhost:5000/tech/brand/${params.brand}`)
+    loader:({params})=>fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/brand/${params.brand}`)
   }
    
 ]);

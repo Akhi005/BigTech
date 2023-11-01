@@ -1,24 +1,18 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
 const Product = () => {
-    const { brand } = useParams();
-  const [products, setProducts] = useState([]);
-//   const [JSProduct, setJSProduct] = useState([]);
-
-  useEffect(() => {
-    fetch(`http://localhost:5000/tech/brand/${brand}`,
-    {
-        method:'POST',
-        headers:{
-            'content-type':'application/json'
-        },
-        body:JSON.stringify(brand)
-    })
-      .then(response => response.json())
-      .then(data => setProducts(data))
-  }, [brand]);
   
+  const [product, setProduct] = useState([]);
+const {brand} = useParams();
+
+ console.log(product)
+  useEffect(() => {
+    fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/brand/${brand}`)
+      .then(response => response.json())
+      .then(data => setProduct(data))
+  }, [brand]);
    return (
         <>
         <div className="carousel w-full mt-10 h-[350px] ">
@@ -41,9 +35,11 @@ const Product = () => {
         <a href="#item3" className="btn btn-xs">3</a>
         <a href="#item4" className="btn btn-xs">4</a>
     </div>
-    <h2>Brand : {brand}</h2>
-    <div className='grid md:grid-cols-3 mt-5 mb-10'> 
-        </div>
+    <h2 className="font-bold text-center">Brand : {brand}</h2>
+    <div className="grid md:grid-cols-3 mt-5 mb-10">
+        {product.map(tech => <ProductCard key={tech._id}
+            tech={tech}  ></ProductCard>)}
+      </div>
      </>
     );
 };

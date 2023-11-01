@@ -18,7 +18,7 @@ const UpdateTechnology = () => {
         const rating=form.rating.value;
         const updated={name,brand,type,product_pic,price,brand_pic,rating,details};
         // console.log(updated);
-        fetch(`http://localhost:5000/tech/${_id}`,{
+        fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
