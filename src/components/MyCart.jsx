@@ -72,7 +72,6 @@ const MyCart = () => {
     {/* head */}
     <thead>
       <tr>
-        <th></th>
         <th>Name</th>
         <th>Brand</th>
         <th>Price</th>
