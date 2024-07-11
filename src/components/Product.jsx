@@ -9,7 +9,7 @@ const {brand} = useParams();
 
  console.log(product)
   useEffect(() => {
-    fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/brand/${brand}`)
+    fetch(`http://localhost:5000/tech/brand/${brand}`)
       .then(response => response.json())
       .then(data => setProduct(data))
   }, [brand]);

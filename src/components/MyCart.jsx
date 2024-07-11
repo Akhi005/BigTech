@@ -18,7 +18,7 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/mycart/${_id}`, {
+        fetch(`http://localhost:5000/mycart/${_id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
@@ -43,7 +43,7 @@ const MyCart = () => {
   //   const newcart=[...cart,tech];
   //   console.log(newcart);
   //   setCart(newcart);
-  //   fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/mycart/${newcart}`,{
+  //   fetch(`http://localhost:5000/mycart/${newcart}`,{
   //       method:'POST',
   //       headers:{
   //           'content-type':'application/json'

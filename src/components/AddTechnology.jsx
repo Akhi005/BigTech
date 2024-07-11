@@ -15,7 +15,7 @@ const AddTechnology = () => {
         const rating=form.rating.value;
         const newtechnology={name,brand,type,product_pic,price,brand_pic,rating,details};
         console.log(newtechnology);
-        fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech',{
+        fetch('http://localhost:5000/tech',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

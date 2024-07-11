@@ -31,7 +31,7 @@ const SignUp = () => {
                 const createAt = result.user?.metadata?.creationTime;
 
                 const user = { email, createAt: createAt };
-                fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/user', {
+                fetch('http://localhost:5000/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

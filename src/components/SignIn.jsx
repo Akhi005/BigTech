@@ -43,7 +43,7 @@ const SignIn = () => {
                const user={ 
                 email,
                 lastLoggedAt: result.user?.metadata?.lastSignInTime }
-              fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/user',{
+              fetch('http://localhost:5000/user',{
                 method:'PATCH',
                 headers:{
                     'content-type':'application/json'

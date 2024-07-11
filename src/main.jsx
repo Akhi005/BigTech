@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '/src/App.css'; 
+import '/src/index.css';  
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,23 +19,21 @@ import PrivateRoute from './components/PrivateRoute.jsx';
 import MyCart from './components/MyCart.jsx';
 import DetailsCard from './components/DetailsCard.jsx';
 import Product from './components/Product.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
     loader:()=>fetch('data.json')
-  },{
-    path: "/app",
-    element: <App></App>,
-    loader:()=>fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech')
-  },{
+ }
+  ,{
     path: "/addtechnology",
-    element: <PrivateRoute><AddTechnology></AddTechnology></PrivateRoute>,
+    element: <AddTechnology></AddTechnology>,
     
   },{
     path: "/updatetechnology/:id",
     element: <UpdateTechnology></UpdateTechnology>,
-    loader:({params})=>fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/${params.id}`)
+    loader:({params})=>fetch(`http://localhost:5000/tech/${params.id}`)
   },{
     path:"/signin",
     element:<SignIn></SignIn>
@@ -43,25 +43,25 @@ const router = createBrowserRouter([
   },{
     path:"/users",
     element:<Users></Users>,
-    loader:() => fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/user') 
+    loader:() => fetch('http://localhost:5000/user') 
   },{
     path:"/mycart",
     element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-    loader:()=>fetch('https://big-tech-36v9saaxg-akhis-projects.vercel.ap/mycart')
+    loader:()=>fetch('http://localhost:5000/mycart')
   },
   {
     path:"/DetailsCard/:id",
     element:<PrivateRoute><DetailsCard></DetailsCard></PrivateRoute>,
-    loader:({params})=>fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/${params.id}`)
+    loader:({params})=>fetch(`http://localhost:5000/tech/${params.id}`)
   },{
     path:"/product/:brand",
     element:<Product></Product>,
-    loader:({params})=>fetch(`https://big-tech-36v9saaxg-akhis-projects.vercel.ap/tech/brand/${params.brand}`)
+    loader:({params})=>fetch(`http://localhost:5000/tech/brand/${params.brand}`)
   }
    
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>  <RouterProvider router={router} /></AuthProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

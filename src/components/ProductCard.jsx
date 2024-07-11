@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 const ProductCard = ({ tech }) => {
-    const {brand,details,name, price,product_pic,rating, type}=tech;
+    const {brand,details, price,product_pic,rating, type}=tech;
     const handleAddMycart=()=>{
         console.log(tech);
         

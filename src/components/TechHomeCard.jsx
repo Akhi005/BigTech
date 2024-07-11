@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
 const TechHomeCard = ({ tech}) => {
-    const { Brand, Brand_Image } = tech;
+    const { name,image } = tech;
 
     return (
         <div className="card w-96 bg-base-100 shadow-2xl mt-5 rounded">
-            <figure><img src={Brand_Image} className="h-[200px] p-10" /></figure>
-            <div className="">{Brand}</div>
+            <figure><img src={image} className="h-[200px]" /></figure>
+            <div className="text-xl italic my-1 font-serif">{name}</div>
             <div className="card-actions text-white">
-                <Link to={`/product/${Brand}`}><button className="bg-green-800 p-3 font-bold m-5">Products</button></Link>
+                <Link to={`/product/${name}`}><button className="bg-yellow-600 p-3 font-bold m-5">Products</button></Link>
             </div>
         </div>
     );
