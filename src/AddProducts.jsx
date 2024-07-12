@@ -6,7 +6,7 @@ const AddProducts = () => {
         event.preventDefault();
         const form=event.target;
         const name=form.name.value;
-        const brand=form.brand.value;
+        const brand=form.brand.value.toLowerCase();
         const type=form.type.value;
         const product_pic=form.product_pic.value;
         const details=form.details.value;
@@ -24,11 +24,11 @@ const AddProducts = () => {
           if(data.insertedId){
             Swal.fire({
                 title: 'Success!',
-                text: 'New Technology added successfully',
+                text: 'New Product added successfully',
                 icon: 'success',
                 confirmButtonText: 'Close'
               })
-              Navigate('/');
+              Navigate('/productlist');
           }
         })
     }

@@ -6,7 +6,7 @@ const UpdateTechnology = () => {
     const tech = useLoaderData();
     const navigate = useNavigate();
     const { _id, name, brand, product_pic, details, type, price } = tech;
-
+   console.log(brand);
     const [formData, setFormData] = useState({
         name,
         brand,
@@ -41,7 +41,7 @@ const UpdateTechnology = () => {
             if (data.modifiedCount) {
                 Swal.fire({
                     title: 'Success!',
-                    text: 'Technology updated successfully',
+                    text: 'Product updated successfully',
                     icon: 'success',
                     confirmButtonText: 'close'
                 });

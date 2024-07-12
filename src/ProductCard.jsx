@@ -16,7 +16,7 @@ const ProductCard = ({ tech }) => {
         
             Swal.fire({
                 title: 'Success!',
-                text: 'New Technology updated successfully',
+                text: 'Added successfully',
                 icon: 'success',
                 confirmButtonText: 'close'
               })
