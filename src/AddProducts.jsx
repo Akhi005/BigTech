@@ -33,63 +33,63 @@ const AddProducts = () => {
         })
     }
     return (
-        <div className='px-10 mx-11 my-8 bg-yellow-600 h-full'>
-            <h2 className="text-4xl text-center text-white py-5 ">Add Products</h2>
+        <div className=' bg-yellow-600 my-2 mx-8'>
+            <h2 className="text-4xl text-center pt-5 text-white">Add Products</h2>
             <form onSubmit={handleAdd}>
-              <div className="flex text-xl  mt-5 p-14 gap-10">
+              <div className="flex text-xl p-14 gap-10">
               <div className="w-1/2">
-                <div className="form-control my-1">
-                    <label className="label"><span className="label-text text-white">Model Name</span></label>
+                <div className="form-control">
+                    <label className="label"><span className="label-text ">Model Name</span></label>
                     <label className="input-group">
-                        <input type="text" name="name" className="input input-bordered w-full p-1 rounded" />
+                        <input type="text" name="name" className="input input-bordered w-full rounded" />
                     </label>
                 </div>
-                <div className="form-control my-1">
+                <div className="form-control my-3">
                     <label className="label">
-                        <span className="label-text text-white">Brand</span>
+                        <span className="label-text ">Brand</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="brand"  className="input input-bordered w-full p-1 rounded" />
+                        <input type="text" name="brand"  className="input input-bordered w-full rounded" />
                     </label>
                 </div>
-                <div className="form-control my-1">
+                <div className="form-control my-2">
                     <label className="label">
-                        <span className="label-text text-white">Type</span>
+                        <span className="label-text ">Type</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="type"  className="input input-bordered w-full p-1 rounded" />
+                        <input type="text" name="type"  className="input input-bordered w-full rounded" />
                     </label>
                 </div>
                 </div>
                <div className="w-1/2">
-               <div className="form-control my-1">
+               <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-white">Product Image URL</span>
+                        <span className="label-text ">Product Image URL</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="product_pic"  className="input input-bordered w-full p-1 rounded" />
+                        <input type="text" name="product_pic"  className="input input-bordered w-full rounded" />
                     </label>
                 </div>
-               <div className="form-control my-1">
+               <div className="form-control my-3">
                     <label className="label">
-                        <span className="label-text text-white">Short Description</span>
+                        <span className="label-text ">Description</span>
                     </label>
                     <label className="input-group">
-                     <input type="text" name="details" id="" className="input input-bordered w-full p-1 rounded" />
+                     <input type="text" name="details" className="input input-bordered w-full rounded" />
                     </label>
                 </div>
-               <div className="form-control my-1">
+               <div className="form-control my-2">
                     <label className="label">
-                        <span className="label-text text-white">Price</span>
+                        <span className="label-text ">Price</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="price"  className="input input-bordered w-full p-1 rounded" />
+                        <input type="text" name="price"  className="input input-bordered w-full rounded" />
                     </label>
                 </div>
                </div>
               </div>
-              <div className='flex justify-center '>
-              <input className="btntext-center border-none px-10 cursor-pointer rounded mt-5 mb-12 py-3 text-white font-semibold bg-yellow-500"
+              <div className='flex justify-center'>
+              <input className="btntext-center border-none px-10 cursor-pointer rounded mb-3 py-3  font-semibold bg-yellow-500"
                type="submit" value="Add" />
               </div>
             </form>

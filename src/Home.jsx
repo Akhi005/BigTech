@@ -6,7 +6,6 @@ import Brand from "./Brand";
 
 const Home = () => {
   const loadedbrand = useLoaderData();
-  
   return (
     <div>
       <div className="relative h-[640px]">

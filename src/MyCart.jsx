@@ -56,8 +56,8 @@ const MyCart = () => {
     <div>
       <h1 className="text-4xl text-center mb-10 mt-10">My Cart</h1>
       <div className="overflow-x-auto">
-        <table className="table">
-          <thead>
+        <table className="table ">
+          <thead >
             <tr>
               <th>Name</th>
               <th>Brand</th>
@@ -83,7 +83,7 @@ const MyCart = () => {
             ))}
             <tr>
               <td colSpan="2"></td>
-              <td>Total Price:</td>
+              <td className='text-lg font-semibold'>Total Price:</td>
               <td>{totalPrice}</td>
             </tr>
           </tbody>
@@ -91,7 +91,7 @@ const MyCart = () => {
       </div>
       <div className="flex justify-center mt-10">
         <Link to="/">
-          <button className="btn btn-active btn-primary">Back to Tech Page</button>
+          <button className="btn btn-active btn-primary">Back to Previous Page</button>
         </Link>
       </div>
     </div>

@@ -58,10 +58,10 @@ const Product_List = () => {
   };
 
   return (
-    <div>
+    <div className=' mx-12'>
       <h1 className="text-4xl text-center mb-10 mt-10">Product List</h1>
       <div className="overflow-x-auto">
-        <table className="table">
+        <table className="table ">
           <thead>
             <tr>
               <th>Name</th>
